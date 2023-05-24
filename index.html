@@ -1,130 +1,157 @@
-<html>
-<meta charset='UTF-8'/>
-<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
-<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<!-- Judul untuk Browser -->
-<title>Untukmu <3</title>
+    <meta charset="utf-8" />
+    <title>Kuru Kuru~</title>
+    <meta name="description" content="The website for Herta, the cutest genius Honkai: Star Rail character out there.">
+    <meta name="keywords" content="Kuru2, Kuru Kuru, Kuru Kuru herta, kuru kuru herta hsr, kuru kuru herta star rail, herta honkai star rail, herta, herta hsr, star rail herta">
+    <link rel="canonical" href="https://herta.vercel.app" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <meta name="google-site-verification" content="uCMayYHqtOD8aEBNfptPFZn3qQliIFjghRvj_kPJFV8" />
 </head>
 
 <body>
-<style>
-body{background-image: url("https://cutewallpaper.org/25x/rhtk6ih8m/45999143.jpg");background-color:#1e1e1e}
-h1{border-bottom:1px solid #97999A;margin:0;color:#fefefe;font-weight:700;}
-body{font-family: 'Quicksand', sans-serif;padding: 25px}
-
-.scrollImage{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:center; margin:2em 0; position:relative;left:-7.5px;width:calc(100% + 15px)}
-.scrollImage > *{border-radius:10px;width:calc(33.333% - 15px); margin:0 7.5px 15px}
-.scrollImage p{height:30vh;background:#FFFFFF;font-size:4vw;font-weight:700;display:flex;flex-wrap:nowrap;text-align:center;align-items:center;justify-content:center;}
-.scrollImage p:nth-child(odd){color:#0B1600;}.scrollImage p:nth-child(even){color:#030090;}
-.scrollImage{flex-wrap:nowrap;justify-content:flex-start;position:relative;width:calc(100% + 0px);left:-20px;padding:0 20px; overflow-y:hidden;overflow-x:scroll;scroll-behavior:smooth;scroll-snap-type:x mandatory; -ms-overflow-style:none;-webkit-overflow-scrolling:touch} 
-.scrollImage > *{display:block;flex-shrink:0; width:90%; margin:0 15px 0 0; scroll-snap-align:center} .scrollImage > *:last-child{margin-right:0} .scrollImage:after{content:'';display:block;flex-shrink:0; align-self:stretch;padding-left:20px}
-#wrnRed{color:red} #wrnGreen{color:green}
-
-.lovein{width:48px;height:48px;display:flex;align-items:center;justify-content:center;transition:all .1s ease;}
-.lovein:hover, .scrollImage p img:hover{transition:all .1s ease;transform: scale(1.2);}
-</style>
-
-<h1>Untuk Kamu<3</h1>
-<p style="opacity:.8;color:#ffffff;margin-top:12px;">Geser Dong ><</p>
-
-<!--[ Ucapan ]-->
-<div class='scrollImage'>
-  <p><img style="margin-right:10px;" alt="Love You" src="https://c.tenor.com/-fxSxMDttpcAAAAi/anime-love.gif" height="50" />
-  Hai Kamu~</p>
-  <p>Bagaimana Kabarmu Hari Ini?</p>
-  <p>Aku Harap Kamu Bahagia&nbsp;<span id="wrnRed">yaa</span></p>
-  <p>Kamu Tau Gak ?</p>
-  <p>Aku Bikin Ini&nbsp;<span id="wrnRed">Karena...</span></p>
-  <p>Mau Ngomong Sama&nbsp;<span id="wrnGreen">Kamu</span></p>
-  <p>Aku Sebenernya...</p>
-  <p>Suka Sama&nbsp;<span id="wrnRed">Kamu</span>&nbsp;:(<img style="margin-left:5px;" alt="Pentol" src="https://c.tenor.com/UUuMZsHzkwQAAAAi/love-anime.gif" height="50" /></p>
-  <p><span id="wrnGreen">Kamu</span>&nbsp;Sempurna Dimata Aku</p>
-  <p>Kamu&nbsp;<span id="wrnRed">Penyemangatku</span></p>
-  <p>Jadi....<img style="margin-left:5px;" alt="Pentol" src="https://media.tenor.com/lCs1cxTz2ywAAAAi/chibi-anime.gif" height="50" /></p>
-  <p><span id="wrnRed">Kamu</span>&nbsp;Mau Gak? Jadi Pacar&nbsp;<span id="wrnRed">Aku?</span></p>
-  <p><img style="margin-right:5px;" alt="Pentol" src="https://media.tenor.com/VlM6r5uVtYoAAAAi/white-love.gif" height="70" /></p>
-  <p>Oh Iya</p>
-  <p>Pencet&nbsp;<span id="wrnRed">LOVE</span>Nya..<label class='lovein' onClick="mulai()">&#10084;&#65039;</label></p>
-</div>
-
-<!-- Ini JS agar Tombolnya berjalan sesuai perintah -->
-<script type="text/javascript">
-            const author = 'Zeltoria';
-            const swals = Swal.mixin({
-                cancelButtonColor: '#909090',
-                confirmButtonColor: '#3085d6',
-            });
-            async function mulai(){
-                var { value: nama } = await swals.fire({
-                    title: 'Masukin Nama Kamu',
-                    input: 'text',
-                    showCancelButton: false,
-                });
-                if(nama){
-                    var { isConfirmed: sayang } = await swals.fire({
-                        title: `${nama} Sayang Gak Sama ${author} :(`,
-                        confirmButtonText: 'Sayang Banget',
-                        cancelButtonText: 'Gak!',
-                        showCancelButton: true,
-                    });
-                    if(sayang){
-                        var { value: persen } = await swals.fire({
-                            title: 'Seberapa Sayang?',
-                            icon: 'question',
-                            input: 'range',
-                            inputLabel: 'Antara 10-100% Ya',
-                            inputAttributes: {
-                                min: 10,
-                                max: 100,
-                            },
-                            inputValue: 90
-                        });
-                        if(persen){
-                            await swals.fire(`Makasih Ya Udah Sayang Sama ${author} ${persen}%`);
-                            var { isConfirmed: kangen } = await swals.fire({
-                                title: `Sekarang ${nama} Kangen Ga Sama ${author}?`,
-                                confirmButtonText: 'Kangen',
-                                cancelButtonText: 'Gak!',
-                                showCancelButton: true,
-                            });
-                            if(kangen){
-                                await swals.fire(`Huhu Iya ${author} Juga Kangen ${nama} :((`);
-                                await swals.fire('Maaciiww!', 'Udah Meluangkan Waktunya!');
-                                await swals.fire(`${author} Sayang ${nama} &#10084;&#65039;`);
-
-                                var { isConfirmed: wht } = await swals.fire({
-                                title: `${nama} Mau Chat ${author}?`,
-                                confirmButtonText: 'Mau',
-                                cancelButtonText: 'Engga!',
-                                showCancelButton: true,
-                            });
-                            if(wht){
-                            	await swals.fire(`Okeyyy`, `Nanti ${nama} Kirim Pesan Ini Ke WhatsApp ${author} Ya &#10084;&#65039;`);
-                            	//nomor WhatsApp
-                                window.location = "https://api.whatsapp.com/send?phone=6285760451683&text=Hai Zel,%0ASweet Banget<3%0A%0AAku%20Mau%20Jadi%20Pacar%20Kamu%20Semoga%20Hubungan%20Kita%20Langgeng%20Sayang%20Mwuah";
-                            } else {
-                                //gak ke wa
-                                await swals.fire('Oke. See You &#10084;&#65039;');
-                            }
-                            } else {
-                                //gak kangen
-                                await swals.fire('Aarrgghhh');
-                            }
-                        }
-                    } else {
-                        //gak sayang
-                        await swals.fire('Padahal Aku Sayang Banget Sama Kamu');
-                        await swals.fire('Yaudah Deh');
-                        await swals.fire('Semoga Harimu Indah &#10084;&#65039;');
-                    }
-                } else {
-                    await swals.fire('Isi Namanya Sayanggg :)');
-                    await swals.fire('Gak Boleh Kosong');
-                }
-            }
-</script>
+    <img src="img/hertaa1.webp" class="preload" />
+    <img src="img/hertaa2.webp" class="preload" />
+    <div id="content">
+        <h1>Kuru Kuru~</h1>
+        <hr id="subtitle-seperator" />
+        <h2>
+            The website for Herta, the cutest genius Honkai:
+            Star Rail character out there.
+        </h2>
+        <div id="counter-container">
+            <p>The kuru~ has been squished</p>
+            <br />
+            <br />
+            <p id="counter">0</p>
+            <br />
+            <br />
+            <p id="counter-times">times</p>
+            <button id="counter-button" onclick="counterClick()">
+                Squish the kuru~!
+            </button>
+        </div>
+        <hr />
+        <div id="grid">
+            <noscript>Your browser does not support JavaScript or JavaScript has been
+                disabled.<br />This website relies on JavaScript, so please enable it
+                or use another browser.</noscript>
+        </div>
+    </div>
+    <div id="footer">
+        <a href="https://honkai-star-rail.fandom.com/wiki/Herta"><img id="herta-card" loading="lazy" src="img/card.webp" alt="" /></a>
+        <div id="footer-text">
+            <p>Herta gif made by</p>
+            <p>
+                <a href="https://twitter.com/kyouka_hashiba" target="_blank"><iconify-icon icon="mdi:twitter"
+                        id="twitter-footer-icon" class="footer-icon"></iconify-icon><span
+                        class="footer-icon-text">@kyouka_hashiba</span></a>
+            </p>
+            <p id="footer-repository-text">
+                You can check out the GitHub repository here:
+            </p>
+            <p>
+                <a href="https://github.com/Yuri-Neko" target="_blank"><iconify-icon icon="mdi:github"
+                        id="github-footer-icon" class="footer-icon"></iconify-icon><span
+                        class="footer-icon-text">herta_kuru</span></a>
+            </p>
+        </div>
+    </div>
 </body>
+
 </html>
+
+<script>
+    //varible
+    var audioList = [
+        new Audio("audio/kuruto.mp3"),
+        new Audio("audio/kuru1.mp3"),
+        new Audio("audio/kuru2.mp3"),
+    ];
+
+    for (const audio of audioList) {
+        audio.preload = "auto";
+    }
+
+    var firstSquish = true;
+    //end varible
+
+    if (!localStorage.getItem("count")) {
+        localStorage.setItem("count", 0);
+    }
+
+    let temporaryCounter = parseInt(localStorage.getItem("count"));
+    const counterElement = document.getElementById("counter");
+    const counterTimesElement = document.getElementById("counter-times");
+    
+    displayCounter(temporaryCounter);
+
+    //counter button
+    function counterClick() {
+        ++temporaryCounter;
+        displayCounter(temporaryCounter);
+        localStorage.setItem("count", temporaryCounter);
+
+        playKuru();
+        animateHerta();
+    }
+    
+    function displayCounter(value) {
+        counterElement.innerText = value;
+        counterTimesElement.innerText = value === 1 ? "time" : "times";
+    }
+
+    function playKuru() {
+        var audio;
+
+        if (firstSquish) {
+            firstSquish = false;
+            audio = audioList[0].cloneNode();
+        } else {
+            var random = Math.floor(Math.random() * 2) + 1;
+            audio = audioList[random].cloneNode();
+        }
+
+        audio.play();
+
+        audio.addEventListener("ended", function () {
+            this.remove();
+        });
+    }
+
+    function animateHerta() {
+        var counter_button = document.getElementById("counter-button");
+        var id = null;
+
+        var random = Math.floor(Math.random() * 2) + 1;
+        var elem = document.createElement("img");
+        elem.src = `img/hertaa${random}.webp`;
+        elem.style.position = "absolute";
+        elem.style.right = "-510px";
+        elem.style.top = counter_button.getClientRects()[0].bottom + scrollY - 430 + "px"
+        elem.style.zIndex = "-1";
+        document.body.appendChild(elem);
+
+        var pos = -510;
+        var limit = window.innerWidth + 510;
+        clearInterval(id);
+        id = setInterval(frame, 12);
+        function frame() {
+            if (pos >= limit) {
+                clearInterval(id);
+                elem.remove()
+            } else {
+                pos += 20;
+                elem.style.right = pos + 'px';
+            }
+        }
+    }
+    //end counter button
+</script>
